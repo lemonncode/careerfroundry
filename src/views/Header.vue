@@ -32,7 +32,7 @@
         </button>
       </div>
       <div
-        class="w-full block lg:flex  flex-grow lg:justify-end  lg:w-auto text-center"
+        class="w-full block lg:flex  flex-grow lg:justify-center lg:w-auto text-center"
       >
         <div v-show="menu">
           <div class="text-md lg:flex-grow">
@@ -56,13 +56,19 @@
             </a>
             <a
               href="#responsive-header"
-              class="block mt-4 lg:inline-block lg:mt-0 text-blue-100 hover:text-white mr-4 lg:mr-2 font-bold"
+              class="block mt-4 lg:inline-block xl:hidden lg:mt-0 text-blue-100 hover:text-white mr-4 lg:mr-2 font-bold"
             >
               <router-link to="/login"> Login</router-link>
             </a>
           </div>
         </div>
       </div>
+      <a
+              href="#responsive-header"
+              class="xl:block mt-4 hidden lg:mt-0 text-blue-100 hover:text-white mr-4 lg:mr-10 font-bold"
+            >
+              <router-link to="/login"> Login</router-link>
+            </a>
     </nav>
     <div
       class="flex items-center flex-wrap bg-darkblue p-6 h-32 lg:h-80"
