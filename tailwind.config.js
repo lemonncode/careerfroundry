@@ -15,6 +15,7 @@ module.exports = {
         lightgreen: "#54D0C6",
         purple: "#78679E",
         grayrose: "#AD7A99",
+        rose:"#FA6357"
       },
     },
   },

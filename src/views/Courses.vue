@@ -7,11 +7,11 @@
       loading...
     </h1>
     <p  class="text-gray-900 text-sm ml-10 font-mono font-medium">Choose a program and transform your career</p>
-    <div class="grid grid-cols-2 max-w-6xl m-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 max-w-5xl m-auto mt-10">
       <div v-for="course in courses" :key="course.title">
         <course-card :course="course"></course-card>
       </div>
-      <RouterView/>
+      <router-view></router-view>
     </div>
   </div>
 </template>

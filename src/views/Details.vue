@@ -50,6 +50,10 @@ export default {
     this.getDetails();
   },
 
+  beforeRouteUpdate(to, from, next) {
+    next({ to:"/courses/:slug" });
+  },
+
   methods: {
     async getDetails() {
       this.loading = true;
@@ -62,7 +66,7 @@ export default {
 
           .then((result) => (this.details = result.data));
         this.details.start_dates.shift();
-        return details;
+        return this.details;
       } catch (err) {
         console.log(err);
       }

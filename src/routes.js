@@ -6,12 +6,22 @@ import NotFound from "./views/NotFound.vue";
 
 export const routes = [
   { path: "/", name: "home", component: Home },
-  { path: "/courses", name: "Courses", component: Courses },
   {
-    path: "/courses/:slug",
-    name: "details",
+    path: "/courses",
+    name: "Courses",
+    component: Courses,
+    children: [
+      {
+        path: "/courses/:slug",
+        name: "details",
 
-    component: Details,
+        component: Details,
+       
+       
+       
+      },
+    ],
   },
+
   { path: "/:path(.*)", component: NotFound },
 ];
