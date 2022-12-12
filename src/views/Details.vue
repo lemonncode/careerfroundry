@@ -1,0 +1,81 @@
+<template>
+  <div>
+    <div v-if="details != null">
+      <div>{{ details.description }}</div>
+      proximas fechas:
+      <div v-for="dates in details.start_dates" :key="dates.day">
+        {{ dates }}
+      </div>
+      <div v-if="showEU">
+        mostrar precios europeos
+        <div v-for="price in details.prices" :key="price.currency">
+          <div v-show="price.currency == 'eur'">
+            {{ price.amount }} {{ price.currency }}
+          </div>
+        </div>
+      </div>
+      <div v-if="showUSD">
+        mostrar else
+        <div v-for="price in details.prices" :key="price.currency">
+          <div v-show="price.currency == 'usd'">
+            {{ price.amount }} {{ price.currency }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <location @getContinentCode="getContinent"></location>
+  </div>
+</template>
+<script>
+import axios from "axios";
+import Location from "./Location.vue";
+export default {
+  name: "Details",
+
+  data() {
+    return {
+      slug: null,
+      details: null,
+      code: null,
+      showEU: false,
+      showUSD: false,
+    };
+  },
+  components: {
+    Location,
+  },
+  created() {
+    this.slug = this.$route.params.slug;
+    this.getDetails();
+  },
+
+  methods: {
+    async getDetails() {
+      this.loading = true;
+      try {
+        await axios
+
+          .get(
+            `https://private-e05942-courses22.apiary-mock.com/courses/${this.slug}`
+          )
+
+          .then((result) => (this.details = result.data));
+        this.details.start_dates.shift();
+        return details;
+      } catch (err) {
+        console.log(err);
+      }
+      this.loading = false;
+    },
+    getContinent(code) {
+      console.log(code);
+      if (code == "EU") {
+        this.showEU = true;
+      } else {
+        this.showUSD = true;
+      }
+    },
+  },
+};
+</script>

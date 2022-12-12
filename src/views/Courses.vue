@@ -1,11 +1,19 @@
 <template>
-  <div> <h1   class="text-gray-900 text-sm ml-10 font-mono font-medium" v-if="loading">loading...</h1>
+  <div>
+    <h1
+      class="text-gray-900 text-sm ml-10 font-mono font-medium"
+      v-if="loading"
+    >
+      loading...
+    </h1>
+    <p  class="text-gray-900 text-sm ml-10 font-mono font-medium">Choose a program and transform your career</p>
     <div class="grid grid-cols-2 max-w-6xl m-auto">
-    <div v-for="course in courses" :key="course.title" >
-      <course-card :course="course"></course-card>
+      <div v-for="course in courses" :key="course.title">
+        <course-card :course="course"></course-card>
+      </div>
+      <RouterView/>
     </div>
   </div>
-  </div> 
 </template>
 
 <script>

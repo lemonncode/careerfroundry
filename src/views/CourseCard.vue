@@ -21,10 +21,12 @@
         <span
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
         >
-          <a :href="course.url"> mas info</a></span
+          <a :href="course.url"> view program</a></span
         >
       </div>
+
     </div>
+   
   </div>
 </template>
 <script>
