@@ -6,7 +6,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
+        roboto: ["Roboto"],
+      },
+      colors: {
+        darkblue: "#223C50",
+        middleblue: "#2F6690",
+        darkbluegreen: "#1C7488",
+        lightgreen: "#54D0C6",
+        purple: "#78679E",
+        grayrose: "#AD7A99",
       },
     },
   },
