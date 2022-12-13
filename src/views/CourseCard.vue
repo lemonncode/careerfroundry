@@ -46,25 +46,38 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-            /></svg>
+            />
+          </svg>
         </span>
       </div>
       <p class="text-gray-100 text-base">
-      <button class="absolute h-16 w-48 right-4 -bottom-20 bg-rose">
-        <router-link :to="`/courses/${course.slug}`"> Price and Dates </router-link>
-      </button>
-    </p>
+        <button
+          class="absolute h-12 w-48 right-4 -bottom-16 bg-rose"
+          @click="showDetails"
+        >
+          Price and Dates
+        </button>
+      </p>
     </div>
-    
+    <price v-show="show" :course="course"></price>
   </div>
 </template>
 <script>
+import Price from "./Price.vue";
 export default {
   props: ["course"],
+
   data() {
     return {
       color: ["bg-lightgreen", "bg-purple"],
+      show: false,
     };
+  },
+  components: { Price },
+  methods: {
+    showDetails() {
+      this.show = !this.show;
+    },
   },
 };
 </script>
