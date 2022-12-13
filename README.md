@@ -1,4 +1,4 @@
-# careerfroundry
+# Career Foundry
 Landing pages to show upcoming courses for Career Foundry
 
  ## Description
