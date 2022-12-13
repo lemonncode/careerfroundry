@@ -2,7 +2,7 @@
   <div>
     <div v-if="details != null">
       <div
-        class="border-r border-b border-l border-darkblue lg:border-l-4 lg:border-t lg:borde-rdarkblue bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+        class="border-r border-b border-l border-t-4 border-darkblue lg:border-l-4 lg:border-t lg:borde-darkblue bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal m-8"
       >
         <h1 class="text-gray-900 text-lg font-roboto font-bold">
           Next start dates:
@@ -17,7 +17,10 @@
 
         <div v-for="price in details.prices" :key="price.currency">
           <div v-show="price.currency == 'eur'">
-            {{ price.amount }} {{ price.currency }}
+            <h1 class="text-darkbluegreen text-xl font-roboto font-bold mt-4">
+              {{ price.amount }} {{ price.currency }}
+            </h1>
+            
           </div>
         </div>
         <!--show else EEUU price-->

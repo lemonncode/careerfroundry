@@ -6,9 +6,9 @@
     >
       loading...
     </h1>
-    <div class="ml-10 mt-16 bg-gray-50 h-14 w-fit shadow-xl"> <p  class="text-middleblue text-xl mx-6 font-roboto tracking-widest font-light px-6 py-4">Choose a program and transform your career!!! <span class="font-black">Our upcoming courses</span> </p></div>
+    <div class="ml-10 mt-16 bg-gray-50 h-fit lg:h-14 w-fit shadow-xl"> <p  class="text-middleblue text-sm lg:text-xl mx-6 font-roboto tracking-widest font-light px-6 py-4">Choose a program and transform your career!!! <span class="font-black">Our upcoming courses</span> </p></div>
    
-    <div class="grid grid-cols-1 lg:grid-cols-2 max-w-5xl m-auto mt-14">
+    <div class="grid grid-cols-1 lg:grid-cols-2 max-w-5xl m-auto mt-14 gap-8">
       <div v-for="course in courses" :key="course.title">
         <course-card :course="course"></course-card>
       </div>
