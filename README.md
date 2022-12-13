@@ -4,8 +4,11 @@ Landing pages to show upcoming courses for Career Foundry
  ## Description
 
 Technologies: vue, vite, vue-router, axios 
+
 Css framework: Tailwind
+
 Code fragmentation in different components, communication between them through 'props'.
+
 
 Challenge for me: get the code of the continent. 
 
