@@ -21,9 +21,9 @@
       };
     },
    async created() {
-      // this.getContinentCode();
-      //borrar despues
-      this.getCode('EU')
+      this.getContinentCode();
+    
+      this.getCode(code)
      
     },
   
