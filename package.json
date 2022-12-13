@@ -1,5 +1,5 @@
 {
-  "name": "vue-router",
+  "name": "career_froundry",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
